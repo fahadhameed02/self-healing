@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>المنتجات - Self Healing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Cairo', sans-serif; background: #f0fff0; margin: 0; padding: 0; }
+    header, nav { text-align: center; padding: 20px; background-color: #a5d6a7; }
+    nav a { margin: 0 10px; text-decoration: none; color: #1b5e20; font-weight: bold; }
+    nav a:hover { color: #2e7d32; }
+    h1 { color: #2e7d32; }
+    .filters { text-align: center; margin: 20px; }
+    .filters button { margin: 5px; padding: 10px 20px; border: none; background: #81c784; color: white; border-radius: 20px; cursor: pointer; }
+    .filters button:hover { background: #66bb6a; }
+    .products { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+    .product { background: white; width: 280px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; padding: 15px; }
+    .product img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
+    .product h3 { color: #2e7d32; }
+    .product p { font-size: 0.95em; margin: 5px 0; }
+    .product .price { font-weight: bold; color: #1b5e20; }
+    .product button { margin-top: 10px; background: #66bb6a; color: white; border: none; padding: 10px 15px; border-radius: 20px; cursor: pointer; }
+    .product button:hover { background: #388e3c; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>منتجات Self Healing</h1>
+</header>
+
+<nav>
+  <a href="index.html">الرئيسية</a>
+  <a href="products.html">المنتجات</a>
+  <a href="knowledge.html">مركز المعرفة</a>
+  <a href="faq.html">الأسئلة الشائعة</a>
+  <a href="contact.html">تواصل معنا</a>
+</nav>
+
+<div class="filters">
+  <button onclick="filterProducts('all')">الكل</button>
+  <button onclick="filterProducts('supplement')">مكملات</button>
+  <button onclick="filterProducts('herb')">أعشاب وفطريات</button>
+  <button onclick="filterProducts('dxn')">منتجات DXN</button>
+</div>
+
+<div class="products" id="product-list">
+  <!-- Supplements -->
+  <div class="product supplement">
+    <img src="https://i.imgur.com/hIWVkyA.jpg" alt="سبيرولينا" />
+    <h3>سبيرولينا</h3>
+    <p>غنية بالبروتين والمعادن</p>
+    <p class="price">7000 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+  <div class="product supplement">
+    <img src="https://i.imgur.com/mFtYfdF.jpg" alt="عصير المورينزي" />
+    <h3>عصير المورينزي</h3>
+    <p>مفيد للهضم والطاقة</p>
+    <p class="price">10000 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+  <div class="product supplement">
+    <img src="https://i.imgur.com/Y0Q3cfO.jpg" alt="المثلث الذهبي" />
+    <h3>المثلث الذهبي</h3>
+    <p>ريشي + مورينزي + سبيرولينا</p>
+    <p class="price">21000 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+
+  <!-- Herbs & Mycology -->
+  <div class="product herb">
+    <img src="https://i.imgur.com/GC7UL9U.jpg" alt="فطر عرف الأسد" />
+    <h3>فطر عرف الأسد</h3>
+    <p>يعزز الذاكرة والتركيز</p>
+    <p class="price">12000 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+  <div class="product herb">
+    <img src="https://i.imgur.com/nGGWZpG.jpg" alt="كورديسيبس" />
+    <h3>كورديسيبس</h3>
+    <p>يقوي المناعة والطاقة</p>
+    <p class="price">13000 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+  <div class="product herb">
+    <img src="https://i.imgur.com/AZY2ZTj.jpg" alt="ميكوفيجي" />
+    <h3>ميكوفيجي</h3>
+    <p>مزيج فطريات مطحونة</p>
+    <p class="price">15000 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+
+  <!-- DXN Products -->
+  <div class="product dxn">
+    <img src="https://i.imgur.com/FsG1iBG.jpg" alt="قهوة لينجزي" />
+    <h3>قهوة لينجزي</h3>
+    <p>قهوة مع مستخلص الريشي</p>
+    <p class="price">9000 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+  <div class="product dxn">
+    <img src="https://i.imgur.com/WKJ7aHf.jpg" alt="معجون جانوزي" />
+    <h3>معجون أسنان جانوزي</h3>
+    <p>تنظيف طبيعي للفم</p>
+    <p class="price">6000 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+  <div class="product dxn">
+    <img src="https://i.imgur.com/9gJtM1P.jpg" alt="صابون جانوزي" />
+    <h3>صابون جانوزي</h3>
+    <p>للبشرة الحساسة</p>
+    <p class="price">5000 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+  <div class="product dxn">
+    <img src="https://i.imgur.com/zMPVZwC.jpg" alt="شامبو جانوزي" />
+    <h3>شامبو جانوزي</h3>
+    <p>شامبو طبيعي منعش</p>
+    <p class="price">8000 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+  <div class="product dxn">
+    <img src="https://i.imgur.com/USJEL9w.jpg" alt="زيت جانو" />
+    <h3>زيت جانو</h3>
+    <p>للتدليك والتلطيف</p>
+    <p class="price">9000 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+  <div class="product dxn">
+    <img src="https://i.imgur.com/qHeOJ9D.jpg" alt="كوكوزي" />
+    <h3>كوكوزي</h3>
+    <p>كاكاو طبيعي مع الريشي</p>
+    <p class="price">9500 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+  <div class="product dxn">
+    <img src="https://i.imgur.com/Oxth8jq.jpg" alt="زيت جوز الهند" />
+    <h3>زيت جوز الهند</h3>
+    <p>عضوي نقي 100%</p>
+    <p class="price">8500 د.ع</p>
+    <button>أضف للسلة</button>
+  </div>
+</div>
+
+<script>
+function filterProducts(category) {
+  const products = document.querySelectorAll('.product');
+  products.forEach(p => {
+    if (category === 'all' || p.classList.contains(category)) {
+      p.style.display = 'block';
+    } else {
+      p.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
